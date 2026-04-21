@@ -38,7 +38,7 @@ public abstract class MaterialBiblioteca {
     public abstract void exibirDetalhes();
 
     public void emprestar() {
-        System.out.println("Material emprestado: [titulo]");
+        System.out.println("Material emprestado\n");
     }
 
 }

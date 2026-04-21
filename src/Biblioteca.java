@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Biblioteca {
     private ArrayList<MaterialBiblioteca>  materiais;
 
     //Iniciando a lista de array por meio de um metoto
-    private Biblioteca() {
+    Biblioteca() {
         materiais = new ArrayList<>();
     }
     
@@ -17,6 +18,10 @@ public class Biblioteca {
             m.exibirDetalhes();
         }
     }
-    buscarPorTitulo(String titulo)
+    buscarPorTitulo(String titulo) {
+        for(MaterialBiblioteca m : materiais){
+            if(material.getTitulo())
+        }
+    }
 
 }

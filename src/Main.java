@@ -80,11 +80,14 @@ public class Main {
 
                     case 5:
                         System.out.printf("Informe o nome do material: ");
-                        b1.buscarPorTitulo();
+                        String material = leitor.nextLine();
+                        b1.buscarPorTitulo(material);
                         break;
 
                     case 6:
-
+                        System.out.printf("Informe o nome do material: ");
+                        String m = leitor.nextLine();
+                        b1.emprestarMaterial(m);
                         break;
 
                     case 7:

@@ -10,16 +10,18 @@ public class Main {
 
         while(continuar) {
 
-            System.out.printf("===== MENU BIBLIOTECA =====");
+            System.out.printf("\n===== MENU BIBLIOTECA =====\n");
             System.out.printf("1 - Adicionar Livro\n");
             System.out.printf("2 - Adicionar Revista\n");
             System.out.printf("3 - Adicionar Jornal\n");
             System.out.printf("4 - Listar Materiais\n");
             System.out.printf("5 - Buscar por Título\n");
             System.out.printf("6 - Emprestar Material\n");
-            System.out.printf("7 - Sair");
+            System.out.printf("7 - Sair\n");
+            System.out.printf("Escolha uma opção: ");
             op = leitor.nextInt();
             leitor.nextLine();
+            System.out.printf("\n");
 
 
 

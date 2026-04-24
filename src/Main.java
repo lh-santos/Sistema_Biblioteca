@@ -11,12 +11,12 @@ public class Main {
         while(continuar) {
 
             System.out.printf("===== MENU BIBLIOTECA =====");
-            System.out.printf("1 - Adicionar Livro");
-            System.out.printf("2 - Adicionar Revista");
-            System.out.printf("3 - Adicionar Jornal");
-            System.out.printf("4 - Listar Materiais");
-            System.out.printf("5 - Buscar por Título");
-            System.out.printf("6 - Emprestar Material");
+            System.out.printf("1 - Adicionar Livro\n");
+            System.out.printf("2 - Adicionar Revista\n");
+            System.out.printf("3 - Adicionar Jornal\n");
+            System.out.printf("4 - Listar Materiais\n");
+            System.out.printf("5 - Buscar por Título\n");
+            System.out.printf("6 - Emprestar Material\n");
             System.out.printf("7 - Sair");
             op = leitor.nextInt();
             leitor.nextLine();
@@ -37,7 +37,8 @@ public class Main {
                         System.out.printf("Numero de paginas: ");
                         int pagLivro = leitor.nextInt();
 
-                        b1.adicionarMaterial(tituloLivro, anoLivro, autorLivro, pagLivro);
+                        Livro livro = new Livro(tituloLivro, autorLivro, anoLivro, pagLivro);
+                        b1.adicionarMaterial(livro);
                         break;
 
                     case 2:
@@ -53,7 +54,9 @@ public class Main {
                         System.out.printf("Numero de edição: ");
                         int edRevista = leitor.nextInt();
 
-                        b1.adicionarMaterial(tituloRevista, anoRevista, autorRevista, edRevista);
+
+                        Revista revista = new Revista(tituloRevista, autorRevista, anoRevista, edRevista);
+                        b1.adicionarMaterial(revista);
                         break;
 
 
@@ -70,7 +73,8 @@ public class Main {
                         System.out.printf("Numero de paginas: ");
                         int dataEdicaoJornal = leitor.nextInt();
 
-                        b1.adicionarMaterial(tituloJornal, anoJornal, autorJornal, dataEdicaoJornal);
+                        Jornal jornal = new Jornal(tituloJornal, autorJornal, anoJornal, dataEdicaoJornal);
+                        b1.adicionarMaterial(jornal);
                         break;
 
                     case 4:
@@ -87,7 +91,8 @@ public class Main {
                     case 6:
                         System.out.printf("Informe o nome do material: ");
                         String m = leitor.nextLine();
-                        b1.emprestarMaterial(m);
+                        MaterialBiblioteca mat = b1.buscarPorTitulo(m);
+                        b1.emprestarMaterial(mat);
                         break;
 
                     case 7:
